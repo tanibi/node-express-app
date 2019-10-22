@@ -4,8 +4,7 @@
 
 ## Links
 
-- [Demo](https://node-express-app-563.herokuapp.com/)
-- [Source](https://github.com/denisecase/node-express-app)
+- [Source](https://github.com/tanibi/node-express-app)
 
 ## Requirements
 
