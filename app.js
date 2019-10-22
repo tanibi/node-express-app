@@ -20,6 +20,7 @@ const port = process.env.PORT || config.get("port");
 app.get('/', function (req, res) {
   res.send('Welcome to the default page!  <br> <br>' +
     'Try going to different URIs by adding these at the end: <br> <br>' +
+    '/hey <br>' +
     '/hello <br>' +
     '/big <br>' +
     '/json <br>' +
@@ -30,6 +31,10 @@ app.get('/', function (req, res) {
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
+})
+
+app.get('/hey', (req, res) => {
+  res.send('Welcome to Express!')
 })
 
 // or use the new arrow function syntax
@@ -92,6 +97,7 @@ app.use((req, res, next) => {
 app.listen(port, hostname, () => {
   console.log(`\n App listening at http://${hostname}:${port}/`)
   console.log(`\n Try going to different URIs:\n`)
+  console.log(`   Try /hey`)
   console.log(`   Try /hello`)
   console.log(`   Try /big`)
   console.log(`   Try /json`)
